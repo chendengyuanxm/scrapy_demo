@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Python下的os.system调用cmd命令时遇到中文出现乱码的解决方法_PHP课堂</title>
+<meta name="keywords" content="" />
+<meta name="description" content="在Python程序中添加以下代码即可os.system(&#039;chcp 65001&#039;)例如：#-*- encoding:utf-8 -*-import os, timeos.system(&#039;chcp 65001&#039;)os.system(&#039;ping 8.8.8.8 -t&#039;)" />
+<link href="/static/ui/css/bootstrap.min.css" rel="stylesheet">
+<link href="/static/css/index.css" rel="stylesheet">
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/ui/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!--header-->
+<div class="container-fluid header">
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collspse"> <span class="button-img"></span> </button>
+        <a class="navbar-brand" href="/">PHP课堂</a> </div>
+      <div class="collapse navbar-collapse navbar-right" id="nav-collspse">
+        <ul class="nav navbar-nav">
+          <li><a href="/">博客首页</a></li>
+          <li class="dropdown"> <a href="/note/" class="dropdown-toggle" data-toggle="dropdown">学习笔记<b class="caret"></b></a></a>
+            <ul class="dropdown-menu">
+						<li><a href="/php/">php</a></li>
+            			<li><a href="/python/">python</a></li>
+            			<li><a href="/other/">其他</a></li>
+            			<li><a href="/note/linux/">Linux</a></li>
+                        </ul>
+          </li>
+          <li><a target="_blank" href="/soft/">常用软件</a></li>
+          <li><a target="_blank" href="/about/">关于博主</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<!--banner-->
+<div class="banner"> <span>Web技术博客</span>
+  <p>一个学习技术的记事本</p>
+</div>
+<!--main-->
+<div class="container main">
+  <div class="row">
+    <div class="col-md-9 main_left">
+      <!--位置-->
+      <ol class="breadcrumb" style="width:100%;">
+     <a href="/">首页</a>&nbsp;>&nbsp;<a href="/note/">学习笔记</a>&nbsp;>&nbsp;<a href="/python/">python</a>      </ol>
+      <!--内容-->
+      <h1 class="article_title">Python下的os.system调用cmd命令时遇到中文出现乱码的解决方法</h1>
+      <div class="article_meta">编辑：孙磊 &nbsp;&nbsp;&nbsp;&nbsp;时间： 2020-07-29 09:08:17</div>
+      <div class="article_content">
+        在Python程序中添加以下代码即可
+<pre>
+<code>os.system('chcp 65001')</code></pre>例如：
+<pre>
+<code>#-*- encoding:utf-8 -*-
+
+import os, time
+os.system('chcp 65001')
+os.system('ping 8.8.8.8 -t')</code></pre>		<div class="bdshare">
+		<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_mshare" data-cmd="mshare" title="分享到一键分享"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{},"image":{"viewList":["mshare","weixin","sqq","tieba","tsina","qzone","copy"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["mshare","weixin","sqq","tieba","tsina","qzone","copy"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com//static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+		</div>
+      </div>
+      <!--相关文章-->
+      <div class="panel panel-default article_like">
+        <div class="panel-heading">
+          <h3 class="panel-title">相关文章</h3>
+        </div>
+        <ul class="list-group">
+				<li class="list-group-item"><a href='/note/linux/20.html'>如何在Deepin上安装wine运行Windows软件</a></li>
+        		<li class="list-group-item"><a href='/python/9.html'>python  selenium使用方法</a></li>
+        		<li class="list-group-item"><a href='/other/17.html'>deepin修改镜像源方法</a></li>
+        		<li class="list-group-item"><a href='/python/12.html'>Python windows电脑安装Scrapy 报错解决方法</a></li>
+        		<li class="list-group-item"><a href='/python/2.html'>python 安装pip教程</a></li>
+        		<li class="list-group-item"><a href='/python/5.html'>不同浏览器User-Agent</a></li>
+                </ul>
+      </div>
+    </div>
+    <!--右侧-->
+    <div class="col-md-3 main_right visible-md visible-lg">
+      <!--搜索-->
+<!--
+      <div class="row search">
+        <form action="/plus/search.php">
+          <span class="col-xs-9">
+          <input name="keyword" type="text" placeholder="请输入您的问题！" class="search_input form-control">
+          </span> <span class="col-xs-3">
+          <button class="search_btn btn btn-default"></button>
+          </span>
+        </form>
+      </div>
+-->
+      <!--热门文章-->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">热门文章</h3>
+        </div>
+        <ul class="list-group">
+		          <li class="list-group-item"><a title="Python安装库下载慢 教你如何让pip源使用国内镜像,快速下载安装" href="/python/1.html">Python安装库下载慢 教你如何让pip源使用国内镜像,快速下载安装</a></li>
+                  <li class="list-group-item"><a title="python 安装pip教程" href="/python/2.html">python 安装pip教程</a></li>
+                  <li class="list-group-item"><a title="并发与并行的区别?" href="/python/3.html">并发与并行的区别?</a></li>
+                  <li class="list-group-item"><a title="教你辨别百度PC端蜘蛛和手机端蜘蛛的User-Agent" href="/python/4.html">教你辨别百度PC端蜘蛛和手机端蜘蛛的User-Agent</a></li>
+                  <li class="list-group-item"><a title="不同浏览器User-Agent" href="/python/5.html">不同浏览器User-Agent</a></li>
+                  <li class="list-group-item"><a title="pyCharm 修改下载源为豆瓣源提高下载效率" href="/python/6.html">pyCharm 修改下载源为豆瓣源提高下载效率</a></li>
+                </ul>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">标签云</h3>
+        </div>
+        <div class="panel-body tag"> 
+		<a href='/'>自动编号</a>
+		</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--底部-->
+<div class="container-fluid footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <h4>关于 ThinkStudy</h4>
+        <p>一个学习WEB技术的记事本，总结分享开发经验！</p>
+      </div>
+      <div class="col-md-5">
+        <h4>友情链接</h4>
+        <ul class="list-unstyled list-inline">
+          <li><a href="http://www.phpkt.com/">PHP课堂</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h4>WEB技术</h4>
+        <ul class="list-unstyled list-inline">
+          <li>HTML</li>
+          <li>Query</li>
+          <li>PHP</li>
+          <li>PYTHON</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="beian">© CopyRight 2013-2020  PHPKT.COM  Inc.All Rights Reserved.&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' href="http://www.beian.miit.gov.cn/">冀ICP备20001757号-1</a>&nbsp;&nbsp;&nbsp;&nbsp;模板设计 Power by 孙磊 </div>
+</body>
+</html>
